@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="typing-text">Wellcome to My Tic Tac Toe Game</h1>
+
+
+    <h2 id="status"></h2>
+
+
+    <!-- <div class="container" > -->
+        <div class="container" id="gameUI" style="display: none;">
+        <div class="grid">
+            <div class="row">
+                <div onclick="handleClick(this)" id="0" class="col"></div>
+                <div onclick="handleClick(this)" id="1" class="col"></div>
+                <div onclick="handleClick(this)" id="2" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="3" class="col"></div>
+                <div onclick="handleClick(this)" id="4" class="col"></div>
+                <div onclick="handleClick(this)" id="5" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="6" class="col"></div>
+                <div onclick="handleClick(this)" id="7" class="col"></div>
+                <div onclick="handleClick(this)" id="8" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <button class="backbnt" onclick="goBack()">Go Back</button>
+    <button id="computerVsPlayer">Computer vs Player</button>
+    <button class="newbnt" onclick="newGame()">New Game</button>
+    <button class="pvpbnt" onclick="window.location.href='pvp.html'">Player vs Player</button>
+    
+
+
+<audio id="tickSound" src="sounds/tick-sound.mp3"></audio>
+<audio id="winSound" src="sounds/win-sound.mp3"></audio>
+
+
+    <script src="game.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

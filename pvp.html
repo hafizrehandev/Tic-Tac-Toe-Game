@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="typing-text">Wellcome to My Tic Tac Toe Game</h1>
+
+
+    <h2 id="status"></h2>
+
+    <div class="container">
+        <div class="grid">
+            <div class="row">
+                <div onclick="handleClick(this)" id="0" class="col"></div>
+                <div onclick="handleClick(this)" id="1" class="col"></div>
+                <div onclick="handleClick(this)" id="2" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="3" class="col"></div>
+                <div onclick="handleClick(this)" id="4" class="col"></div>
+                <div onclick="handleClick(this)" id="5" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="6" class="col"></div>
+                <div onclick="handleClick(this)" id="7" class="col"></div>
+                <div onclick="handleClick(this)" id="8" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <button class="newbnt" onclick="goToNewGame()">New Game</button>
+    <button class="backbnt" onclick="goBack()">Go Back</button>
+
+
+
+
+    <!--  POPUP  the start-->
+    <div id="playerSetupModal" class="modal">
+        <div class="modal-box">
+
+            <h4>👇Enter Your Player Names👇</h5>
+                <br>
+
+                <label>First Player is Name</label>
+                <input id="player1" type="text" placeholder="Enter Player 1">
+
+                <label>Second Player is Name</label>
+                <input id="player2" type="text" placeholder="Enter Player 2">
+
+                <button onclick="startGame()">Start Game</button>
+                <!-- <button onclick="closePopup()">Cancel</button> -->
+                <button onclick="cancel()">Cancel</button>
+
+
+        </div>
+    </div>
+    <!--  POPUP the end -->
+
+ <audio id="tickSound" src="sounds/tick-sound.mp3"></audio>
+<audio id="winSound" src="sounds/win-sound.mp3"></audio>
+
+    <script src="pvp.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

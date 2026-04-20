@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #259bbc;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+#gameUI {
+    width: 100%;
+    text-align: center;
+}
+.grid {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.startbnt {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.backbnt,
+.newbnt {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 19px;
+}
+#computerVsPlayer{ 
+     border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 19px;
+    color: white;
+    background-color: blue;
+}
+
+.backbnt {
+    background-color: rgb(239, 66, 158);
+    color: white;
+}
+
+.newbnt {
+    background-color: palegreen;
+    color: black;
+}
+
+.pvpbnt {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.pvpbnt {
+    background-color: rgb(229, 99, 60);
+    color: white;
+}
+
+.grid .row {
+    display: flex;
+}
+
+.col {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.col:hover {
+    background-color: rgba(161, 59, 190, 0.279);
+}
+
+.newbnt:hover {
+    background: #bb75ea;
+    background: linear-gradient(90deg, rgb(189, 129, 229) 0%,
+            rgb(215, 111, 111) 50%, rgb(208, 167, 110) 100%);
+}
+
+.newbnt:hover {
+    color: white;
+}
+
+.backbnt:hover {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgb(62, 166, 207) 0%,
+            rgb(63, 196, 119) 50%, rgb(221, 205, 59) 100%);
+}
+
+.backbnt:hover {
+    color: #000;
+}
+
+.startbnt:hover {
+    color: black;
+background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%,
+ rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+     
+}
+
+.pvpbnt:hover {
+    background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1)
+ 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+#computerVsPlayer:hover{ 
+background: #2A7B9B;
+background: linear-gradient(90deg, rgb(231, 41, 41) 0%,
+ rgb(16, 192, 89) 50%, rgb(220, 107, 15) 100%);
+
+}
+/* popup the start */
+body{
+font-family: Arial;
+text-align: center;
+background: #259bbc;
+color: white;
+}
+
+/* .container{
+display:flex;
+justify-content:center;
+margin-top:30px;
+} */
+
+.col{
+width:80px;
+height:80px;
+border:1px solid black;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+cursor:pointer;
+}
+
+.newbnt,.pvpbnt{
+padding:10px 15px;
+margin:5px;
+cursor:pointer;
+border:none;
+border-radius:5px;
+}
+
+.newbnt{background:lightgreen;}
+.pvpbnt{background:orange;}
+
+/* popup the start */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-box {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    color: white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    animation: popUp 0.3s ease;
+}
+
+.modal-box h2 {
+    margin-bottom: 15px;
+}
+
+.modal-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.modal-box button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Start button */
+.modal-box button:first-of-type {
+    background: #28a745;
+    color: white;
+}
+
+/* Cancel button */
+.modal-box button:last-of-type {
+    background: #dc3545;
+    color: white;
+}
+
+/* Hover effects */
+.modal-box button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+/* Animations */
+@keyframes popUp {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* popup the end */
+#status {
+    font-size: 22px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+/* typing animation the start */
+.typing-text {
+    font-family: monospace;
+    font-size: 35px;
+    color: white;
+
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+
+    width: 0;
+
+    /* Animation */
+    animation: typing 4s steps(34) forwards,
+        blink 0.6s step-end infinite;
+
+    margin: auto;
+    margin-top: 12px;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 34ch;
+    }
+}
+
+/* Cursor Blink */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Mobile media */
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 22px;
+    }
+
+    .typing-text {
+        font-size: 18px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+
+        /* animation KEEP ON */
+        animation: typing 4s steps(34) forwards,
+                   blink 0.6s step-end infinite;
+    }
+
+    .col {
+        width: 55px;
+        height: 55px;
+        font-size: 35px;
+    }
+
+    .startbnt,
+    .backbnt,
+    .newbnt,
+    #computerVsPlayer,
+    .pvpbnt {
+        font-size: 14px;
+        padding: 8px 12px;
+       width: 80%;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+
+
